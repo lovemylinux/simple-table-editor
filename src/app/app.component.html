@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+<div class="container">
+  <!-- Content here -->
+
+  <h1>Редактор</h1>
+  <label>Введите данные в формате JSON:</label>
+  <textarea class="form-control form-group shadow-textarea w-75" [value]="inputJSON" (input)="onInputJSONChange($event)" placeholder=""></textarea>
+  <div class="btn-group" role="group" aria-label="...">
+    <div class="custom-file mr-1">
+      
+        <!-- <button type="button" class="btn btn-primary" > -->
+          <label for="file" class="btn btn-primary">Загрузить CSV</label>
+        <!-- </button>  -->
+      <input type="file" class="d-none"
+              id="file"
+              (change)="handleFileInput($event.target.files)">
+    </div>
+    <button (click)="exportCSVButton()" type="button" class="btn btn-primary" [disabled]="!correct" >Выгрузка CSV</button>
+  </div>
+
+
+  <table class="table table-striped" *ngIf="correct">
+    <thead>
+      <tr>
+        <th *ngFor="let columnName of columnNames"> {{columnName}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of parsedJSON" >
+        <td *ngFor="let columnName of columnNames">
+          <input [value]="row[columnName]" (input)="onChangeElement(parsedJSON, row, columnName, $event)" placeholder="">
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="!isEmpty() && !correct" class="alert alert-warning mt-1 w-75">Ошибка ввода данных</div>
+
+</div>
+
+
+
+

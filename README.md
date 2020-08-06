@@ -4,9 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Screenshots
 
-![](https://lovemylinux.github.com/simple-table-editor/screenshots/img1.png)
-![](https://lovemylinux.github.com/simple-table-editor/screenshots/img2.png)
-![](https://lovemylinux.github.com/simple-table-editor/screenshots/img3.png)
+![](https://github.com/lovemylinux/simple-table-editor/blob/master/screenshots/img1.png)
+![](https://github.com/lovemylinux/simple-table-editor/blob/master/screenshots/img2.png)
+![](https://github.com/lovemylinux/simple-table-editor/blob/master/screenshots/img3.png)
 
 ## Development server
 

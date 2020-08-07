@@ -1,18 +1,12 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-
 <div class="container">
-  <!-- Content here -->
 
   <h1>Редактор</h1>
   <label>Введите данные в формате JSON:</label>
   <textarea class="form-control form-group shadow-textarea w-75" [value]="inputJSON" (input)="onInputJSONChange($event)" placeholder=""></textarea>
-  <div class="btn-group" role="group" aria-label="...">
-    <div class="custom-file mr-1">
+  <div class="btn-group" role="group">
+    <div class="btn btn-primary mr-1">
       
-        <!-- <button type="button" class="btn btn-primary" > -->
-          <label for="file" class="btn btn-primary">Загрузить CSV</label>
-        <!-- </button>  -->
+      <label for="file" class="mb-0">Загрузить CSV</label>
       <input type="file" class="d-none"
               id="file"
               (change)="handleFileInput($event.target.files)">
